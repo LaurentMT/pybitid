@@ -44,7 +44,7 @@ def build_uri(callback_uri, nonce=None):
     if nonce is None: nonce = generate_nonce()
     query = "%s=%s" % (PARAM_NONCE, nonce)
     if scheme != SECURE_SCHEME: query += "&%s=1" % PARAM_UNSECURE
-    return urlunparse((BITID_SCHEME, netloc, path, '', query, ''))
+    return urlunparse((BITID_SCHEME, netloc, path, "", query, ""))
     
 
 def challenge_valid(addr, sign, bitid_uri, callback_uri, is_testnet=False):
@@ -166,6 +166,5 @@ def generate_nonce():
     '''
     entropy = str(os.urandom(32)) + str(random.randrange(2**256)) + str(int(time.time())**7)
     return hashlib.sha256(utils.to_bytes(entropy)).hexdigest()[:NONCE_LEN]
-
     
     
