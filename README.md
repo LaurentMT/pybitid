@@ -2,7 +2,12 @@
 
 This is a python implementation of the BitID authentication protocol (https://github.com/bitid/bitid). 
 
+Demo application using this library can be found at : https://github.com/LaurentMT/pybitid_demo
+Video demonstration : https://www.youtube.com/watch?v=3eepEWTnRTc
+
+
 WORK IN PROGRESS !!! CONTRIBUTORS ARE WELCOME !
+
 
 ## Python versions
 
@@ -127,6 +132,7 @@ sec_param = bitid.extract_unsecure(bitid_uri)
 
 ## Integration example
 
+Demo application in python : https://github.com/LaurentMT/pybitid_demo
 Live demonstration (Ruby on Rails): http://bitid-demo.herokuapp.com/
 
 
