@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''
-Version: 0.0.1
+Version: 0.0.2
 Functions for a python backend implementation of Bitid protocol
 All string parameters are unicode.
 '''
