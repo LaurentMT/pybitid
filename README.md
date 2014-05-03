@@ -16,15 +16,12 @@ Unit tests passed for Python 2.7.6 and 3.3.3
 
 ## Dependencies
 
-Pycoin (https://github.com/richardkiss/pycoin)
-```
-pip install pycoin
-```
+No more dependency on external libraries. All crypto stuff is embedded inside the library.
+Credits to V.Buterin for the original pybitcointools lib.
 
 
 ## Todo
 
-- Integration example
 - Double-check of the code
 - Tests, tests, tests...
 

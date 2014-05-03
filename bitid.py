@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''
-Version: 0.0.2
+Version: 0.0.3
 Functions for a python backend implementation of Bitid protocol
 All string parameters are unicode.
 '''
@@ -8,7 +8,9 @@ import os
 import random
 import time
 import hashlib
-from pybitid import bitsign_utils as utils 
+from pybitid import pybitcointools as bittools
+from pybitid.pysix import to_bytes
+
 try:
     from urllib import quote
     from urlparse import urlparse, urlunparse, parse_qs
@@ -74,9 +76,7 @@ def signature_valid(addr, sign, bitid_uri, callback_uri, is_testnet=False):
         is_test      = True if validation done for test network, False for main network (optional, default = False)        
     '''
     try:
-        int_sig_hash = utils.int_sig_hash(bitid_uri)
-        decoded_sign = utils.decode_sig(sign)
-        if not utils.verify_sign_addr(int_sig_hash, decoded_sign, addr, is_testnet): return False
+        if not bittools.signature_verify(bitid_uri, sign, addr, is_testnet): return False
     except: 
         return False
     return True
@@ -138,9 +138,7 @@ def address_valid(addr, is_testnet=False):
         addr = address
         is_testnet = True if address must be checked for the testnet, False for the mainnet (default)
     '''
-    testnet = is_testnet
-    mainnet = not is_testnet
-    return utils.is_valid_address(addr, mainnet, testnet)
+    return bittools.address_verify(addr, is_testnet)
 
       
 def extract_unsecure(bitid_uri):
@@ -165,6 +163,6 @@ def generate_nonce():
     Credits to https://github.com/vbuterin    
     '''
     entropy = str(os.urandom(32)) + str(random.randrange(2**256)) + str(int(time.time())**7)
-    return hashlib.sha256(utils.to_bytes(entropy)).hexdigest()[:NONCE_LEN]
+    return hashlib.sha256(to_bytes(entropy)).hexdigest()[:NONCE_LEN]
     
     
