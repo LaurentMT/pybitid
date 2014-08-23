@@ -11,13 +11,6 @@ import hashlib
 from pybitid import pybitcointools as bittools
 from pybitid.pysix import to_bytes
 
-try:
-    from urllib import quote
-    from urlparse import urlparse, urlunparse, parse_qs
-except ImportError:
-    from urllib.parse import urlparse, urlunparse, parse_qs, quote
-    
-
 SECURE_SCHEME       = "https"    
 BITID_SCHEME        = "bitid"
 PARAM_NONCE         = "x"
@@ -27,6 +20,17 @@ QRCODE_SERV_URI     = "http://chart.apis.google.com/chart?cht=qr&chs=300x300&chl
 # TODO - check what should be the max length of a nonce in bitid
 NONCE_LEN           = 16
 
+try:
+    from urllib import quote
+    import urlparse
+    # Fix for bug in urlparse (see http://bugs.python.org/issue9374)
+    urlparse.uses_netloc.append(BITID_SCHEME)
+    urlparse.uses_query.append(BITID_SCHEME)
+    urlparse.uses_params.append(BITID_SCHEME)
+    urlparse.uses_fragment.append(BITID_SCHEME)
+    from urlparse import urlparse, urlunparse, parse_qs
+except ImportError:
+    from urllib.parse import urlparse, urlunparse, parse_qs, quote
 
 
 def build_uri(callback_uri, nonce=None):

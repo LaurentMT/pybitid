@@ -20,6 +20,14 @@ No more dependency on external libraries. All crypto stuff is embedded inside th
 Credits to V.Buterin for the original pybitcointools lib.
 
 
+## Installation
+
+```
+Gets the library from Github : https://github.com/LaurentMT/pybitid/archive/master.zip
+Unzips the archive in a temp directory
+python setup.py install
+```
+
 ## Todo
 
 - Double-check of the code
@@ -64,6 +72,9 @@ import pybitid.bitid as bitid
 bitid_uri = ...
 qrcode_uri = bitid.qrcode(bitid_uri)
 ```
+Note: 
+This method is provided for convenience during development / tests. 
+Production code should always generate QRCode image on server to enforce privacy (see  https://pypi.python.org/pypi/qrcode)
 
 
 ### Verification
