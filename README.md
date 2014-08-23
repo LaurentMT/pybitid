@@ -1,8 +1,9 @@
 # PyBitID
 
-This is a python implementation of the BitID authentication protocol (https://github.com/bitid/bitid). 
+This is a python implementation of the BitID authentication protocol (https://github.com/bitid/bitid)
 
 Demo application using this library can be found at : https://github.com/LaurentMT/pybitid_demo
+
 Video demonstration : https://www.youtube.com/watch?v=3eepEWTnRTc
 
 
@@ -16,8 +17,7 @@ Unit tests passed for Python 2.7.6 and 3.3.3
 
 ## Dependencies
 
-No more dependency on external libraries. All crypto stuff is embedded inside the library.
-Credits to V.Buterin for the original pybitcointools lib.
+No more dependency on external libraries. All crypto stuff is embedded inside the library. Credits to V.Buterin for the original pybitcointools lib.
 
 
 ## Installation
@@ -141,7 +141,7 @@ sec_param = bitid.extract_unsecure(bitid_uri)
 ## Integration example
 
 Demo application in python : https://github.com/LaurentMT/pybitid_demo
-Live demonstration (Ruby on Rails): http://bitid-demo.herokuapp.com/
+Live demonstration : http://vps90685.ovh.net:8080/
 
 
 ## Author
