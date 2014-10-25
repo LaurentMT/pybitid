@@ -1,7 +1,4 @@
 #!/usr/bin/env python
-import ez_setup
-ez_setup.use_setuptools()
-
 from setuptools import setup, find_packages
 
 setup(
@@ -10,6 +7,7 @@ setup(
     version='0.0.4',
     description='Python BitId Library',
     author='laurentmt',
+    author_email='llll@lll.com',
     maintainer='laurentmt',
     long_description=open('README.md').read(),
     url='https://www.github.com/LaurentMT/pybitid',
