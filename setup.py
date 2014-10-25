@@ -9,7 +9,6 @@ setup(
     author='laurentmt',
     author_email='llll@lll.com',
     maintainer='laurentmt',
-    long_description=open('README.md').read(),
     url='https://www.github.com/LaurentMT/pybitid',
     download_url='https://www.github.com/LaurentMT/pybitid/tarball/0.0.4',
     keywords=['authentication', 'bitcoin', 'privacy'],
