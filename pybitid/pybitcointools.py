@@ -1,6 +1,6 @@
 #!/usr/bin/python
 '''
-Version: 0.0.3
+Version: 0.0.4
 Bitcoin utils library
 This library is a subset of original code developed by Vitalik Buterin for pybitcointools
   (https://github.com/vbuterin/pybitcointools/blob/master/bitcoin/main.py) 

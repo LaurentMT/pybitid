@@ -22,6 +22,12 @@ No more dependency on external libraries. All crypto stuff is embedded inside th
 
 ## Installation
 
+Using pip
+```
+pip install pybitid
+```
+
+Manual installation
 ```
 Gets the library from Github : https://github.com/LaurentMT/pybitid/archive/master.zip
 Unzips the archive in a temp directory
@@ -69,7 +75,7 @@ bitid_uri = bitid.build_uri(callback, nonce)
 To get the BitId uri as a QRcode (actually an URL pointing to a QRcode generated with Google charts api)
 ```
 import pybitid.bitid as bitid
-bitid_uri = ...
+bitid_uri = (see methods to build a bitid uri)
 qrcode_uri = bitid.qrcode(bitid_uri)
 ```
 Note: 

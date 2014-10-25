@@ -1,6 +1,6 @@
 #!/usr/bin/python
 '''
-Version: 0.0.1
+Version: 0.0.4
 Utils functions used for compatibility with Python 2.7 / 3.3
 '''
 

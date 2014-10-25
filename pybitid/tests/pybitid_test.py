@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''
-Version: 0.0.2
+Version: 0.0.4
 UnitTest of bitid functions
 Requires:
 - PYCOIN:
