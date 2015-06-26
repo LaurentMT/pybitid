@@ -16,7 +16,7 @@ BITID_SCHEME        = "bitid"
 PARAM_NONCE         = "x"
 PARAM_UNSECURE      = "u"
 # TODO: do we need to give more data to Google ? 
-QRCODE_SERV_URI     = "http://chart.apis.google.com/chart?cht=qr&chs=300x300&chl="
+QRCODE_SERV_URI     = "https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl="
 # TODO - check what should be the max length of a nonce in bitid
 NONCE_LEN           = 16
 
